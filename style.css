@@ -1,86 +1,64 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100;0,300;1,100;1,200;1,400&display=swap');
+*{
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
 
 @font-face {
-    font-family: 'Android';
-    src: url('fontes/idroid.otf') format('opentype');
+    font-family:'Fonte';
+    src: url(fontes/idroid.otf) format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'MyBebasneue';
+    src: url(fontes/bebasneue-regular.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 :root {
-   --cor0:#c5ebc6;
-   --cor1:#83e1ad;
-   --cor3:#3ddc84;
-   --cor4:#2fa866;
-   --cor5:#1a5c37;
-   --cor6:#063d1e;
-
-   --fonte-padrao: Arial, Verdana,, Helvetica, sans-serif;
-   --fonte-destaque: 'Bebas Neue', cursive;
-   --fonte-android:'Android', cursive;
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:23px#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+    --fonte0: Arial, Helvetica, sams-serif;
+    --fonte1:'Bebas Neue', cursive;
+    --fonte2:'Android', sans-serif;
 }
-
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-
 
 body {
-    background-color: var(--cor0);
-    font-family:var(--fonte-padrao);
-
-}
-
-a.externo::after {
-    content: '\00A0\1F517';
+    font-family: var(--fonte0);
+    background-color: var(--cor1);
 }
 
 header {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    min-height: 150px;
+    background-image: linear-gradient(to bottom, #3ddc84, #2fa866, #063d1e);
+    color: white;
     text-align: center;
-    padding-top: 40px;
-}
-
-header > h1 {
-    color: white;
-    font-family: var(--fonte-destaque);
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.493);
-    font-weight: normal;
-}
-
-header > p {
-    font-family: var(--fonte-padrao);
-    font-size: 1.2em;
-    color: white;
-    max-width: 500px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: auto;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.295);
-
+    padding: 0% 0% 0% 0%;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+    font-family: MyBebasneue;
 }
 
 nav {
-    background-color: var(--cor5);
-    padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.363);
+    color: white;
+    padding: 0px;
 }
 
 nav > a {
-    color: var(--cor1);
-    padding: 10px;CURIOSIDADES DE TECNOLOGIA
-    Tudo aquilo que você sempre quis saber sobre o mundo
-    Tech, em um único lugar
-
-
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+    text-align: left;
+    font-size: small;
     transition-duration: .5s;
+
 }
 
 nav > a:hover {
@@ -89,46 +67,46 @@ nav > a:hover {
     color: var(--cor5);
 }
 
+#link {
+    text-align: left;
+    padding: 12px 5px 5px 5px
+}
+
 main {
-    max-width: 1000px;
-    min-width: 300px;
     background-color: white;
-    margin: auto;
-    margin-bottom: 30px;
+    border-radius: 0px 0px 10px 10px;
+    min-width: 300px;
+    max-width: 1000px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-main h1 {
-    color: var(--cor5);
-    font-family: var(--fonte-android);
-    font-weight: normal;
-    font-size: 1.8em;
-}
-
-main h2 {
-    font-family: var(--fonte-android);
-    color: var(--cor5);
-    font-size: 1.3em;
-    background-image: linear-gradient(to right, var(--cor1), transparent);
-    text-indent: 8px;
-    font-weight: normal;
-}
-
-main img {
-    width: 100%;
-}
-
-main img.pequena {
-    max-width: 350px;
     margin: auto;
-    display: block;
+    margin-bottom: 1%;
+    text-indent: 30px;
+    text-align: justify;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-family: Fonte, 'Times New Roman', Times, serif;
+    text-align: left;
+    color: #063d1e;
+}
+
+#principal {
+    font-family: MyBebasneue, 'Arial, Helvetica', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px #063d1e;
+    padding: 5px 10px 20px 10px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Fonte, 'Times New Roman', Times, serif;
+    background-image:linear-gradient(to right, #c5ebd6, white );
+    color: #063d1e;
 }
 
 div.video {
-    background-color: var(--cor6);
+    background-color: var(--cor5);
     margin-bottom: 30px;
     margin: 0px -20px 30px -20px;
     padding: 20px;
@@ -144,71 +122,43 @@ div.video > iframe {
     height: 90%;
 }
 
-main p {
-    margin: 15px 0px;
-    text-align: justify;
-    text-indent: 30px;
-    font-size: 1em;
-    line-height: 2em;
+#versao {
+    background-color: var(--cor0);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 15px #063d1e65;
+    margin-bottom: 2%;
+
 }
 
-main strong {
-    color: var(--cor5);
-    font-weight: bold;
-    padding: 2px 6px;
-}
-
-main a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--cor6);
-    background-color: var(--cor1);
-    padding: 2px 6px;
-}
-
-main a:hover {
-    text-decoration: underline;
-    color: var(--cor5);
-}
-
-aside {
-    background-color: var(--cor1);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
-}
-
-aside > h3 {
-    background-color: var(--cor5);
-    color: white;
-    padding: 10px;
-    margin: -10px -10px 0px -10px;
+#versao > h3 {
+    background-color: #2fa866;
     border-radius: 10px 10px 0px 0px;
+    color: white;
 }
 
-aside > ul {
-    list-style-type: '\2714\00A0\00A0';
-    list-style-position: inside;
+ul {
+    list-style-type: '\2714\0020\0020';
     columns: 2;
-
+    list-style-position: inside;
 }
 
 footer {
-    background-color: var(--cor5);
+    background-color: #063d1e;
     color: white;
     text-align: center;
-    font-size: 0.8em;
-    padding: 5px;
+    padding: 6px;
+    margin: 0%;
+    font-style: italic;
+    font-size:small;
+}
+
+img {
+    display: block;
+    margin: 0px auto;
 
 }
 
-footer a {
-    color: white;
-    font-weight: bolder;
+.destaque {
+    color: #063d1e;
     text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    color: var(--cor1);
 }
