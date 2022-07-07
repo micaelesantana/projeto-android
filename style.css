@@ -110,6 +110,12 @@ main img {
     width: 100%;
 }
 
+main img.pequena {
+    max-width: 350px;
+    margin: auto;
+    display: block;
+}
+
 h1 {
     font-family: Fonte, 'Times New Roman', Times, serif;
     text-align: left;
